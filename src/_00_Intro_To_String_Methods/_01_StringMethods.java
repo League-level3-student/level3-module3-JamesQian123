@@ -1,6 +1,9 @@
 package _00_Intro_To_String_Methods;
 
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Collections;
+import java.util.HashMap;
 
 /*
  * Visit the JavaDocs for the String class to view everything you can do with a String.
@@ -34,13 +37,20 @@ public class _01_StringMethods {
 
     // Given Strings s1 and s2, return the longer String
     public static String longerString(String s1, String s2) {
-        return null;
+    	if(s1.length() > s2.length()) {
+    		return s1;
+    	}
+    	return s2;
     }
 
     // If String s contains the word "underscores", change all of the spaces
     // to underscores
     public static String formatSpaces(String s) {
-        return null;
+    	if(s.contains("underscores")) {
+    		String newString = s.replace(' ', '_');
+    		return newString;
+    	}
+        return s;
     }
 
     // Return the name of the person whose LAST name would appear first if they
@@ -48,11 +58,31 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
-        return null;
+    	s1 = s1.trim();
+    	s2 = s2.trim();
+    	s3 = s3.trim();
+       String s1Last = s1.split(" ")[1];
+       String s2Last = s2.split(" ")[1];
+       String s3Last = s3.split(" ")[1];
+       ArrayList<String> sorted = new ArrayList<String>();
+       sorted.add(s1Last);
+       sorted.add(s2Last);
+       sorted.add(s3Last);
+       Collections.sort(sorted);
+       HashMap<String,String> map = new HashMap<>();
+       map.put(s1Last, s1);
+       map.put(s2Last, s2);
+       map.put(s3Last, s3);
+       for(int i =0; i < sorted.size(); i++) {
+    	   return map.get(sorted.get(i));
+       }
+       return null;
     }
 
     // Return the sum of all numerical digits in the String
     public static int numeralSum(String s) {
+    	int sAsInt = Integer.parseInt(s);
+    	
         return 0;
     }
 
