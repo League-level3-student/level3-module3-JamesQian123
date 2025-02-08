@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class _01_StringMethodsTest {
 
+
     @Test 
     void testLongerString() {
         assertEquals("A", _01_StringMethods.longerString("", "A"));
@@ -34,7 +35,7 @@ class _01_StringMethodsTest {
         assertEquals(3, _01_StringMethods.numeralSum("a1b2c"));
         assertEquals(45, _01_StringMethods.numeralSum("x1x2x3x4x5x6x7x8x9x"));
     }
-    /*
+    
     @Test
     void testSubstringCount() {
         assertEquals(3, _01_StringMethods.substringCount("subsubsub", "sub"));
@@ -49,14 +50,14 @@ class _01_StringMethodsTest {
         assertEquals("FCglYAwlISc1JWAvJmABLSE6KS4nYBAyLycyIS0tJTIz", _01_StringMethods.encrypt("The League of Amazing Programmers", '@'));
         assertEquals("JBkdFVAEH1AVEQRQAx8dFVAAAhUEChUcAw==", _01_StringMethods.encrypt("Time to eat some pretzels", 'p'));
     }
-
+    
     @Test
     void testDecrypt() {
         assertEquals("Hello", _01_StringMethods.decrypt("KwYPDww=", 'c'));
         assertEquals("The League of Amazing Programmers", _01_StringMethods.decrypt("FCglYAwlISc1JWAvJmABLSE6KS4nYBAyLycyIS0tJTIz" , '@'));
         assertEquals("Time to eat some pretzels", _01_StringMethods.decrypt("JBkdFVAEH1AVEQRQAx8dFVAAAhUEChUcAw==", 'p'));
     }
-
+    
     @Test
     void testWordsEndWithSubstring() {
         assertEquals(3, _01_StringMethods.wordsEndsWithSubstring("He quietly and slowly backed away from the bear that was hungrily looking at him", "ly"));
@@ -64,7 +65,7 @@ class _01_StringMethodsTest {
         assertEquals(7, _01_StringMethods.wordsEndsWithSubstring("Here are multiple words that have the same letter at the end.", "e"));
         assertEquals(0, _01_StringMethods.wordsEndsWithSubstring("This should give us zero matches", "lemonade"));
     }
-
+    /*
     @Test
     void testDistance() {
         assertEquals(6, _01_StringMethods.distance("subsubsubsub", "sub"));

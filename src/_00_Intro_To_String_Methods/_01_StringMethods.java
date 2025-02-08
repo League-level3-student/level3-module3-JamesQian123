@@ -80,26 +80,49 @@ public class _01_StringMethods {
     }
 
     // Return the sum of all numerical digits in the String
+    
     public static int numeralSum(String s) {
-    	int sAsInt = Integer.parseInt(s);
-    	
-        return 0;
+    	int sum = 0;
+    	for(int i = 0; i < s.length();i++) {
+    		
+    		if(Character.isDigit(s.charAt(i))) {
+	    		int hi = Character.getNumericValue(s.charAt(i));
+	    		System.out.println("number " + i + ": " + hi);
+	    		sum += hi;
+    		}
+    		
+    	}
+        return sum;
     }
 
     // Return the number of times String substring appears in String s
     public static int substringCount(String s, String substring) {
-        return 0;
+    	int counter = 0;
+    	int index = 0;
+    	while(true) {
+    		index = s.indexOf(substring, index);
+    		if(index != -1) {
+    			counter++;
+    			index+=substring.length();
+    		}
+    		else {
+    			break;
+    		}
+    	}
+        return counter;
     }
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
-        return null;
+    	String encrypted = Utilities.encrypt(s.getBytes(), (byte)key);
+        return encrypted;
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
     // cyphertext (encrypted text)
     public static String decrypt(String s, char key) {
-        return null;
+    	String decrypted = Utilities.decrypt(s,(byte)key);
+        return decrypted;
     }
 
     // Return the number of words in String s that end with String substring
