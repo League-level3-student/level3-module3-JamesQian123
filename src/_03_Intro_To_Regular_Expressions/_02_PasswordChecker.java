@@ -25,7 +25,7 @@ public class _02_PasswordChecker implements KeyListener {
      * 1. Check a minimum of 8 characters
      */
     static final String regexCriteria1 = "";
-
+ 
     /*
      * 2. Check there is at least 1 number, i.e. a digit 0-9
      */

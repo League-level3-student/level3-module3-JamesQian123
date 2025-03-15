@@ -21,13 +21,14 @@ public class _01_TheWave {
     
     public static ArrayList<String> wave(String str) {
         char[] chararray = str.toCharArray();
-        ArrayList<Character> charlist = new ArrayList<>();
-        for(int i =0; i < chararray.length;i++) {
-        	charlist.add(chararray[i]);
+        String finalString = " ";
+        ArrayList<String> strlist = new ArrayList<>();
+        for(int i = 0; i < str.length(); i++) { 
+        	if(Character.isWhitespace(str.charAt(i))) {
+        		continue;
+        	}
+        	strlist.add(str.substring(0,i) + Character.toUpperCase(str.charAt(i)) + str.substring(i+1,str.length()));
         }
-        for(int i = 0; i < charlist.size(); i++) {
-        	charlist.get(i).UPPERCASE_LETTER;
-        }
-        return null;
+        return strlist;
     }
 }
